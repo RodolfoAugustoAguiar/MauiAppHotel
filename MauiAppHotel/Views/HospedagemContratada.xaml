@@ -2,11 +2,106 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratada"
-             Title="HospedagemContratada">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#EEF2F9" Offset="0.0" />
+            <GradientStop Color="#F8FAFC" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+
+        <Label Text="Suíte Super Luxo"
+               TextColor="#0B2545"
+               FontFamily="Kalam"
+               FontSize="50"
+               HorizontalTextAlignment="Center"/>
+
+        <BoxView HeightRequest="4"
+                 WidthRequest="80"
+                 CornerRadius="2"
+                 Color="#E0A526"
+                 HorizontalOptions="Center"
+                 Margin="0,0,0,8" />
+
+        <Frame Margin="10"
+               Padding="16"
+               BackgroundColor="White"
+               BorderColor="#E5E7EB"
+               CornerRadius="20"
+               HasShadow="True">
+            <HorizontalStackLayout Spacing="24">
+                <HorizontalStackLayout>
+                    <Label Text="Adultos: "
+                           FontSize="16"
+                           TextColor="#1F2937" />
+                    <Label Text="2"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#0B2545" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Crianças: "
+                           FontSize="16"
+                           TextColor="#1F2937" />
+                    <Label Text="1"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="#0B2545" />
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Margin="10"
+               Padding="16"
+               BackgroundColor="White"
+               BorderColor="#E5E7EB"
+               CornerRadius="20"
+               HasShadow="True">
+            <Grid ColumnDefinitions="*, *, *"
+                  RowDefinitions="Auto, Auto"
+                  RowSpacing="4">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:" FontSize="13" TextColor="#6B7280"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:" FontSize="13" TextColor="#6B7280"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" FontSize="13" TextColor="#6B7280"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="27/05/2024:" FontSize="16" FontAttributes="Bold" TextColor="#0B2545"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="30/05/2024:" FontSize="16" FontAttributes="Bold" TextColor="#0B2545"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="3" FontSize="16" FontAttributes="Bold" TextColor="#0B2545"/>
+            </Grid>
+        </Frame>
+
+        <Frame Margin="10"
+               Padding="18"
+               BackgroundColor="#0B2545"
+               BorderColor="#0B2545"
+               CornerRadius="20"
+               HasShadow="True">
+            <HorizontalStackLayout Spacing="12">
+                <Label Text="Valor Total:"
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       TextColor="#CBD5E1" />
+                <Label Text="R$ 750,00"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="#E0A526" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar"
+                HorizontalOptions="Center"
+                BackgroundColor="#E0A526"
+                TextColor="#0B2545"
+                FontAttributes="Bold"
+                FontSize="17"
+                CornerRadius="14"
+                HeightRequest="50"
+                WidthRequest="200"
+                Clicked="Button_Clicked" />
+
     </VerticalStackLayout>
 </ContentPage>

@@ -2,8 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.QuemSomos"
-             Title="Quem Somos"
-             BackgroundColor="#F5F5F5">
+             Title="Quem Somos">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#EEF2F9" Offset="0.0" />
+            <GradientStop Color="#F8FAFC" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
     <ScrollView>
         <VerticalStackLayout
@@ -13,35 +19,38 @@
 
             <Frame
                 BackgroundColor="White"
-                BorderColor="#E0E0E0"
-                CornerRadius="15"
-                Padding="20"
+                BorderColor="#E5E7EB"
+                CornerRadius="24"
+                Padding="24"
                 HasShadow="True">
 
                 <VerticalStackLayout Spacing="15">
 
                     <Label
                         Text="Quem Somos"
-                        FontSize="32"
+                        FontSize="34"
                         FontAttributes="Bold"
-                        TextColor="#2C3E50"
+                        TextColor="#0B2545"
                         HorizontalOptions="Center" />
 
                     <BoxView
-                        HeightRequest="2"
-                        Color="DarkOrange"
-                        HorizontalOptions="Fill" />
+                        HeightRequest="4"
+                        WidthRequest="80"
+                        CornerRadius="2"
+                        Color="#E0A526"
+                        HorizontalOptions="Center" />
 
                     <Label
                         Text="Rodolfo Augusto Aguiar, aluno do curso técnico em Desenvolvimento de Sistemas."
                         FontSize="18"
-                        TextColor="#555555"
+                        FontAttributes="Bold"
+                        TextColor="#1F2937"
                         HorizontalTextAlignment="Center" />
 
                     <Label
                         Text="Programa desenvolvido em 2026."
-                        FontSize="18"
-                        TextColor="#555555"
+                        FontSize="16"
+                        TextColor="#6B7280"
                         HorizontalTextAlignment="Center" />
 
                 </VerticalStackLayout>
@@ -51,11 +60,12 @@
             <Button
                 Text="Voltar"
                 Clicked="Button_Clicked"
-                BackgroundColor="DarkOrange"
-                TextColor="White"
+                BackgroundColor="#E0A526"
+                TextColor="#0B2545"
                 FontAttributes="Bold"
-                CornerRadius="12"
-                HeightRequest="50"
+                FontSize="17"
+                CornerRadius="14"
+                HeightRequest="52"
                 Margin="20,10,20,0" />
 
         </VerticalStackLayout>
