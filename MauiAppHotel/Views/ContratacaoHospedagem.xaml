@@ -70,7 +70,9 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" />
+                <Button Text="Avançar" Clicked="Button_Clicked" Padding="10" Margin="10"/>
+                
+                <Button Text="Quem somos" Clicked="Button_Clicked_1" Padding="10" Margin="10" BackgroundColor="DarkOrange"/>
 
             </VerticalStackLayout>
         </Frame>
